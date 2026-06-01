@@ -1,28 +1,38 @@
-# Functions in Python: Modulo Calculator
+## Loops in Python: Palindrome Number Checker
 
 ## 🎯 Aim
-To write a Python program that defines a function which accepts two values and returns their **modulo** using the `%` operator.
+To write a Python program that checks whether a given number is a **palindrome** using loops.
 
 ## 🧠 Algorithm
-1. Define a function called `result` that takes two arguments `a` and `b`.
-2. Inside the function, compute the modulo using `a % b`.
-3. Print the result of the modulo operation.
-4. Get two integer inputs from the user.
-5. Call the `result` function with the user-provided values.
+1. Get input from the user and assign it to a variable `num`.
+2. Assign the value of `num` to a temporary variable `temp`.
+3. Initialize a variable `rev` to 0 (used to store the reversed number).
+4. Use a `while` loop to reverse the digits:
+   - While `temp > 0`:
+     - `rev = (10 * rev) + temp % 10`
+     - `temp = temp // 10`
+5. After the loop, compare `rev` with `num`:
+   - If equal, print that the number is a palindrome.
+   - Else, print that it is not a palindrome.
 
 ## 🧾 Program
 ```
-def result(a, b):
-    print("Modulo:", a % b)
+num = int(input("Enter a number: "))
 
-a = int(input("Enter first number: "))
-b = int(input("Enter second number: "))
+temp = num
+rev = 0
 
-result(a, b)
+while temp > 0:
+    rev = (10 * rev) + (temp % 10)
+    temp = temp // 10
+
+if rev == num:
+    print("Palindrome")
+else:
+    print("Not Palindrome")
 ```
-
 ## Output
-<img width="259" height="96" alt="image" src="https://github.com/user-attachments/assets/f806ec80-0303-49ad-8329-f84c3314cc49" />
+<img width="232" height="70" alt="image" src="https://github.com/user-attachments/assets/1b3eaf64-6969-45c7-bcef-fa07efc448cb" />
 
 ## Result
-Thus, the Python program to define a function that accepts two values and returns their modulo using the % operator was executed successfully and the output was verified.
+Thus, the Python program to check whether a given number is a palindrome using loops was executed successfully and the output was verified.
