@@ -1,38 +1,25 @@
-## Loops in Python: Palindrome Number Checker
+# Lambda Function in Python: Addition of Two Numbers
 
 ## 🎯 Aim
-To write a Python program that checks whether a given number is a **palindrome** using loops.
+To write a Python program that defines a **lambda function** which takes two arguments `a` and `b`, and returns their sum.
 
 ## 🧠 Algorithm
-1. Get input from the user and assign it to a variable `num`.
-2. Assign the value of `num` to a temporary variable `temp`.
-3. Initialize a variable `rev` to 0 (used to store the reversed number).
-4. Use a `while` loop to reverse the digits:
-   - While `temp > 0`:
-     - `rev = (10 * rev) + temp % 10`
-     - `temp = temp // 10`
-5. After the loop, compare `rev` with `num`:
-   - If equal, print that the number is a palindrome.
-   - Else, print that it is not a palindrome.
+1. Get two integer inputs from the user.
+2. Use a **lambda function** to define a function `f` that returns `a + b`.
+3. Call the function with the user inputs and print the result.
 
 ## 🧾 Program
 ```
-num = int(input("Enter a number: "))
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
 
-temp = num
-rev = 0
+f = lambda a, b: a + b
 
-while temp > 0:
-    rev = (10 * rev) + (temp % 10)
-    temp = temp // 10
-
-if rev == num:
-    print("Palindrome")
-else:
-    print("Not Palindrome")
+print("Sum:", f(a, b))
 ```
+
 ## Output
-<img width="232" height="70" alt="image" src="https://github.com/user-attachments/assets/1b3eaf64-6969-45c7-bcef-fa07efc448cb" />
+<img width="324" height="92" alt="image" src="https://github.com/user-attachments/assets/0b9a130e-7f86-4c7a-8dc0-5c55cd7a0fff" />
 
 ## Result
-Thus, the Python program to check whether a given number is a palindrome using loops was executed successfully and the output was verified.
+Thus, the Python program to define a lambda function that takes two arguments and returns their sum was executed successfully and the output was verified.
